@@ -1,8 +1,6 @@
-import React from "react";
-
 import Navbar from "components/Navbar";
 
-const Layout = ({ children }) => {
+const Layout: React.FC = ({ children }) => {
   return (
     <>
       <Navbar />
