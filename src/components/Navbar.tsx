@@ -23,7 +23,7 @@ const LinkStyled = styled(Link)<{ $current: boolean }>`
   padding: 12px 30px;
   font-size: 18px;
   text-align: center;
-  opacity: ${(props) => (props.$current ? 1 : 0.6)};
+  opacity: ${(props) => (props.$current ? 1 : 0.5)};
   border-bottom: 5px solid ${(props) => (props.$current ? "rgb(60, 173, 212)" : "transparent")};
   transition: all 0.3s linear;
   &:hover {
