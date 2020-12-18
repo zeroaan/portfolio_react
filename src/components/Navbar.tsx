@@ -7,6 +7,10 @@ import LOGO from "assets/images/logo.png";
 import GITHUB from "assets/images/github.png";
 
 const DivStyled = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,7 +36,7 @@ const ImgLogo = styled.img`
   pointer-events: none;
 `;
 const AGithub = styled.a`
-  margin: 0 30px;
+  margin: 0 30px 0 50px;
   width: 40px;
   height: 40px;
   border-radius: 50px;
