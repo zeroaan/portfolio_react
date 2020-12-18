@@ -3,8 +3,8 @@ import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import LOGO from "assets/images/logo.png";
-import GITHUB from "assets/images/github.png";
+import LOGO from "assets/images/navbar/logo.png";
+import GITHUB from "assets/images/navbar/github.png";
 
 const DivStyled = styled.div`
   position: fixed;

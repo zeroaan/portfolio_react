@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "components/Layout";
 import styled, { keyframes } from "styled-components";
 
-import BACKIMG from "assets/images/background.png";
+import BACKIMG from "assets/images/home/background.png";
 
 const typing = keyframes`
   0%, 80%, 100% {
