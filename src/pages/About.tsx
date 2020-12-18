@@ -6,7 +6,7 @@ import Layout from "components/Layout";
 
 import { AboutData } from "data/AboutData";
 
-const zoomIn = keyframes` 
+const fadeIn = keyframes` 
   0% {
     transform: scale(0.7);
     opacity: 0;
@@ -31,7 +31,7 @@ const LinkAbouts = styled(Link)`
   justify-content: center;
   align-items: center;
   margin: 0 80px;
-  animation: ${zoomIn} 0.75s ease;
+  animation: ${fadeIn} 0.75s ease;
   &:hover img {
     transform: scale(1.05);
     opacity: 1;
