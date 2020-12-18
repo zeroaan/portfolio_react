@@ -18,6 +18,7 @@ const DivStyled = styled.div`
   background-color: black;
   height: 60px;
   user-select: none;
+  z-index: 10;
 `;
 const LinkStyled = styled(Link)<{ $current: boolean }>`
   padding: 12px 30px;
