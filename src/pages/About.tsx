@@ -46,7 +46,7 @@ const About = () => {
     <Layout>
       <DivContainer>
         {AboutData.map((v) => (
-          <LinkAbouts to={`/about/${v.path}`}>
+          <LinkAbouts key={v.title} to={`/about/${v.path}`}>
             <ImgAbout src={v.src} alt={v.title} />
             <H1About>{v.title}</H1About>
           </LinkAbouts>
