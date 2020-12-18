@@ -1,10 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import Layout from "components/Layout";
 
 import { AboutData } from "data/AboutData";
+
+const zoomIn = keyframes` 
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+`;
 
 const DivContainer = styled.div`
   display: flex;
@@ -12,6 +23,7 @@ const DivContainer = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
+  user-select: none;
 `;
 const LinkAbouts = styled(Link)`
   display: flex;
@@ -19,6 +31,7 @@ const LinkAbouts = styled(Link)`
   justify-content: center;
   align-items: center;
   margin: 0 80px;
+  animation: ${zoomIn} 0.75s ease;
   &:hover img {
     transform: scale(1.05);
     opacity: 1;
@@ -32,6 +45,7 @@ const ImgAbout = styled.img`
   height: 180px;
   opacity: 0.8;
   transition: all 0.3s ease;
+  pointer-events: none;
 `;
 const H1About = styled.h1`
   margin-top: 30px;
