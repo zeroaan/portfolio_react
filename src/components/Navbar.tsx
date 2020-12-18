@@ -54,19 +54,20 @@ const ImgGithub = styled.img`
 
 const Navbar = () => {
   const { pathname } = useLocation();
+  const currentPath = pathname.split("/")[1];
 
   return (
     <>
       <DivStyled>
         <ImgLogo src={LOGO} alt="LOGO" />
         <div>
-          <LinkStyled to="/" $current={pathname === "/"}>
+          <LinkStyled to="/" $current={currentPath === ""}>
             Home
           </LinkStyled>
-          <LinkStyled to="/about" $current={pathname === "/about"}>
+          <LinkStyled to="/about" $current={currentPath === "about"}>
             About
           </LinkStyled>
-          <LinkStyled to="/project" $current={pathname === "/project"}>
+          <LinkStyled to="/project" $current={currentPath === "project"}>
             Project
           </LinkStyled>
         </div>
