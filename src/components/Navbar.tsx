@@ -40,9 +40,11 @@ const AGithub = styled.a`
   width: 40px;
   height: 40px;
   border-radius: 50px;
+  opacity: 0.8;
   transition: all 0.3s ease;
   &:hover {
     transform: scale(1.1);
+    opacity: 1;
   }
 `;
 const ImgGithub = styled.img`
