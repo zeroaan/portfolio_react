@@ -20,6 +20,7 @@ const DivStyle = styled.div`
   width: 100vw;
   height: 100vh;
   animation: ${fadeIn} 0.5s linear;
+  user-select: none;
 `;
 const H1Title = styled.h1`
   font-size: 30px;
@@ -32,7 +33,6 @@ const H1Title = styled.h1`
 const DivContent = styled.div`
   width: 1100px;
   height: 450px;
-  background-color: rgb(30, 30, 30);
 `;
 
 interface Props {

@@ -9,9 +9,10 @@ const globalStyles = createGlobalStyle`
     }
     body {
         font-family: 'Poppins', sans-serif;
-        background-color: black;
+        background-color: rgb(10, 10, 10);
         &::-webkit-scrollbar {
             width: 10px;
+            height: 10px;
         }
         &::-webkit-scrollbar-thumb {
             background-color: white;
