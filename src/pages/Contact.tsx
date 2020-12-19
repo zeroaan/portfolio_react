@@ -3,6 +3,8 @@ import styled, { keyframes } from "styled-components";
 
 import AboutLayout from "components/AboutLayout";
 
+import { contactData } from "data/ContactData";
+
 const blinkTyping = keyframes`
     0%, 100%{
       border-color: transparent;
@@ -14,6 +16,7 @@ const blinkTyping = keyframes`
 
 const DivStyle = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
@@ -26,8 +29,7 @@ const DivContact = styled.div`
   border: 1px solid rgb(60, 173, 212);
 `;
 const DivConsole = styled.div`
-  margin-bottom: 5px;
-  width: 100%;
+  width: 700px;
   height: 35px;
   background-color: rgb(60, 173, 212);
   display: flex;
@@ -71,37 +73,18 @@ const DivBlink = styled.div`
 `;
 
 const Contact = () => {
-  const contactData = [
-    {
-      input: `> zeroaan`,
-      output: `< {...}`,
-    },
-    {
-      input: `> zeroaan.name`,
-      output: `< "안진영"`,
-    },
-    {
-      input: `> zeroaan.email`,
-      output: `< "yj6210ag@gmail.com"`,
-    },
-    {
-      input: `> zeroaan.github`,
-      output: `< "https://github.com/zeroaan"`,
-    },
-  ];
-
   return (
     <AboutLayout title="Contact">
       <DivStyle>
+        <DivConsole>
+          <H1Console>Console</H1Console>
+          <DivTool>
+            <p>—</p>
+            <p>◻</p>
+            <p>⨉</p>
+          </DivTool>
+        </DivConsole>
         <DivContact>
-          <DivConsole>
-            <H1Console>Console</H1Console>
-            <DivTool>
-              <p>—</p>
-              <p>◻</p>
-              <p>⨉</p>
-            </DivTool>
-          </DivConsole>
           {contactData.map((v) => (
             <DivBorder key={v.input}>
               <PInput>{v.input}</PInput>
