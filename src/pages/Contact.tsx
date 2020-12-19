@@ -37,6 +37,7 @@ const DivConsole = styled.div`
   align-items: center;
 `;
 const H1Console = styled.h1`
+  font-size: 18px;
   margin: 0 15px;
   color: black;
 `;
@@ -59,6 +60,7 @@ const POutput = styled.p`
   font-size: 20px;
   padding: 8px 0;
   color: rgb(60, 173, 212);
+  user-select: text;
 `;
 const DivBlinkInput = styled(PInput)`
   display: flex;
@@ -88,7 +90,13 @@ const Contact = () => {
           {contactData.map((v) => (
             <DivBorder key={v.input}>
               <PInput>{v.input}</PInput>
-              <POutput>{v.output}</POutput>
+              {v.input === `> zeroaan.github` ? (
+                <a href="http://github.com/zeroaan" target="_blank" rel="noreferrer">
+                  <POutput>{v.output}</POutput>
+                </a>
+              ) : (
+                <POutput>{v.output}</POutput>
+              )}
             </DivBorder>
           ))}
           <DivBorder>
