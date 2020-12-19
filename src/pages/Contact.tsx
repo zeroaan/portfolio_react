@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 
 import AboutLayout from "components/AboutLayout";
@@ -83,7 +84,7 @@ const Contact = () => {
           <DivTool>
             <p>—</p>
             <p>◻</p>
-            <p>⨉</p>
+            <Link to="/about">⨉</Link>
           </DivTool>
         </DivConsole>
         <DivContact>
