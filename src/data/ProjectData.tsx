@@ -5,8 +5,16 @@ import PROJECT04 from "assets/images/project/project04.png";
 import PROJECT05 from "assets/images/project/project05.png";
 import PROJECT06 from "assets/images/project/project06.png";
 import PROJECT07 from "assets/images/project/project07.png";
+import PROJECT08 from "assets/images/project/project08.png";
 
 export const ProjectData = [
+  {
+    id: 8,
+    title: "React Portfolio",
+    subTitle: "react로 만든 포트폴리오",
+    github: "https://github.com/zeroaan/portfolio_react",
+    src: PROJECT08,
+  },
   {
     id: 7,
     title: "Team Con Project",
