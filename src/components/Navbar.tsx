@@ -37,7 +37,7 @@ const ImgLogo = styled.img`
   pointer-events: none;
 `;
 const AGithub = styled.a`
-  margin: 0 30px 0 50px;
+  margin: 0 30px 0 55px;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -55,20 +55,19 @@ const ImgGithub = styled.img`
 
 const Navbar = () => {
   const { pathname } = useLocation();
-  const currentPath = pathname.split("/")[1];
 
   return (
     <>
       <DivStyled>
         <ImgLogo src={LOGO} alt="LOGO" />
         <div>
-          <LinkStyled to="/" $current={currentPath === ""}>
+          <LinkStyled to="/" $current={pathname === "/"}>
             Home
           </LinkStyled>
-          <LinkStyled to="/about" $current={currentPath === "about"}>
+          <LinkStyled to="/about" $current={pathname === "/about"}>
             About
           </LinkStyled>
-          <LinkStyled to="/project" $current={currentPath === "project"}>
+          <LinkStyled to="/project" $current={pathname === "/project"}>
             Project
           </LinkStyled>
         </div>

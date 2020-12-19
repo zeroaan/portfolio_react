@@ -1,12 +1,24 @@
 import React from "react";
+import styled from "styled-components";
 
-import Layout from "components/Layout";
+import AboutLayout from "components/AboutLayout";
+
+const DivStyle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  height: 100%;
+`;
 
 const Profile = () => {
   return (
-    <Layout>
-      <div>Profile</div>
-    </Layout>
+    <AboutLayout title="Profile">
+      <DivStyle>
+        <h1>Profile</h1>
+      </DivStyle>
+    </AboutLayout>
   );
 };
 
