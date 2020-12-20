@@ -27,11 +27,11 @@ const DivConsole = styled.div`
   width: 700px;
   border: 1px solid rgb(60, 173, 212);
 `;
-const PBlinkInput = styled.p`
+const DivBlinkInput = styled.div`
   display: flex;
   align-items: center;
   font-size: 18px;
-  padding: 12px 10px;
+  padding: 12px 12px;
   color: rgb(255, 255, 255);
   font-weight: 300;
 `;
@@ -50,9 +50,9 @@ const Contact = () => {
         <ContactMenu />
         <DivConsole>
           <ContactConsole />
-          <PBlinkInput>
+          <DivBlinkInput>
             {"> "} <DivBlink />
-          </PBlinkInput>
+          </DivBlinkInput>
         </DivConsole>
       </DivStyle>
     </AboutLayout>
