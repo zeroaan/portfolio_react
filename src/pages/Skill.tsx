@@ -15,7 +15,7 @@ const DivStyle = styled.div`
   width: 100%;
   height: 50%;
   margin-bottom: 15px;
-  color: rgb(200, 200, 200);
+  color: rgb(220, 220, 220);
 `;
 const DivSkills = styled.div`
   position: relative;

@@ -13,7 +13,7 @@ const DivSkills = styled.div`
 const PSkill = styled.p`
   font-size: 20px;
   margin: 0 20px;
-  color: rgb(180, 180, 180);
+  color: rgb(200, 200, 200);
 `;
 const DivEtc = styled.div`
   display: flex;
@@ -24,8 +24,8 @@ const DivEtc = styled.div`
   width: 85%;
   height: 25%;
   border-radius: 20px;
-  background-color: rgb(20, 20, 20);
-  color: rgb(180, 180, 180);
+  background-color: rgb(25, 25, 25);
+  color: rgb(200, 200, 200);
 `;
 const H1Etc = styled.div`
   font-size: 30px;
