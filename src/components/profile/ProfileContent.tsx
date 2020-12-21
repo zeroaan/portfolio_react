@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const DivData = styled.div`
-  margin: 25px 0;
+  margin: 30px 0;
 `;
 const DivTitle = styled.div`
   display: flex;
