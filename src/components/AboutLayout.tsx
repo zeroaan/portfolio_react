@@ -33,6 +33,7 @@ const H1Title = styled.h1`
 const DivContent = styled.div`
   width: 1100px;
   height: 450px;
+  color: white;
 `;
 
 interface Props {

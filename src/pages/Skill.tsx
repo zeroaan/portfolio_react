@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import AboutLayout from "components/AboutLayout";
+import SkillContent from "components/skill/SkillContent";
 
 import REACT from "assets/images/skill/react.png";
 import TYPESCRIPT from "assets/images/skill/typescript.png";
@@ -13,7 +14,8 @@ const DivStyle = styled.div`
   align-items: center;
   color: white;
   width: 100%;
-  height: 60%;
+  height: 50%;
+  margin-bottom: 15px;
 `;
 const DivSkills = styled.div`
   position: relative;
@@ -35,7 +37,7 @@ const DivBlur = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(60, 173, 212, 0.2);
+  background-color: rgb(60, 173, 212, 0.15);
   filter: blur(50px);
   border-radius: 50%;
   z-index: -1;
@@ -47,6 +49,7 @@ const ImgSkill = styled.img`
 const PSkill = styled.p`
   font-size: 25px;
   margin-top: 10px;
+  text-transform: uppercase;
 `;
 
 const Skill = () => {
@@ -69,6 +72,8 @@ const Skill = () => {
           <PSkill>Redux</PSkill>
         </DivSkills>
       </DivStyle>
+
+      <SkillContent />
     </AboutLayout>
   );
 };
