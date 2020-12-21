@@ -11,11 +11,6 @@ const DivTitle = styled.div`
   margin-bottom: 10px;
   border-bottom: 1px solid rgb(130, 130, 130);
 `;
-const PId = styled.p`
-  font-size: 28px;
-  margin-right: 16px;
-  color: rgb(36, 200, 255);
-`;
 const PTitle = styled.p`
   font-size: 22px;
   color: rgb(36, 200, 255);
@@ -27,16 +22,14 @@ const PDesc = styled.p`
 `;
 
 interface Props {
-  id: number;
   title: string;
   desc: string;
 }
 
-const ProfileContent: React.FC<Props> = ({ id, title, desc }) => {
+const ProfileContent: React.FC<Props> = ({ title, desc }) => {
   return (
     <DivData>
       <DivTitle>
-        <PId>{id}.</PId>
         <PTitle>{title}</PTitle>
       </DivTitle>
       <PDesc>{desc}</PDesc>

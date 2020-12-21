@@ -31,7 +31,7 @@ const Profile = () => {
         <H1WhoAmI>WHO AM I</H1WhoAmI>
         <DivProfile>
           {ProfileData.map((v) => (
-            <ProfileContent key={v.id} id={v.id} title={v.title} desc={v.desc} />
+            <ProfileContent key={v.id} title={v.title} desc={v.desc} />
           ))}
         </DivProfile>
       </DivStyle>
