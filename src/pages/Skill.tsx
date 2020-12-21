@@ -12,10 +12,10 @@ const DivStyle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   width: 100%;
   height: 50%;
   margin-bottom: 15px;
+  color: rgb(200, 200, 200);
 `;
 const DivSkills = styled.div`
   position: relative;
@@ -28,7 +28,7 @@ const DivSkills = styled.div`
   margin: 0 30px;
   transition: all 0.3s ease;
   &:hover {
-    transform: scale(1.07);
+    transform: scale(1.05);
   }
 `;
 const DivBlur = styled.div`
@@ -37,7 +37,7 @@ const DivBlur = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(60, 173, 212, 0.15);
+  background-color: rgb(60, 173, 212, 0.1);
   filter: blur(50px);
   border-radius: 50%;
   z-index: -1;
