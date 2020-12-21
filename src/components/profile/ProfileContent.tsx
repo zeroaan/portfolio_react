@@ -14,9 +14,11 @@ const DivTitle = styled.div`
 const PId = styled.p`
   font-size: 28px;
   margin-right: 16px;
+  color: rgb(36, 200, 255);
 `;
 const PTitle = styled.p`
   font-size: 22px;
+  color: rgb(36, 200, 255);
 `;
 const PDesc = styled.p`
   font-size: 17px;
@@ -34,7 +36,7 @@ const ProfileContent: React.FC<Props> = ({ id, title, desc }) => {
   return (
     <DivData>
       <DivTitle>
-        <PId>{id}</PId>
+        <PId>{id}.</PId>
         <PTitle>{title}</PTitle>
       </DivTitle>
       <PDesc>{desc}</PDesc>
