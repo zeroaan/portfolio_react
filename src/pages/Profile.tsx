@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import AboutLayout from "components/AboutLayout";
+import AboutLayout from "components/layout/AboutLayout";
 
 const DivStyle = styled.div`
   display: flex;

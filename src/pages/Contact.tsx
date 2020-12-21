@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-import AboutLayout from "components/AboutLayout";
+import AboutLayout from "components/layout/AboutLayout";
 import ContactMenu from "components/contact/ContactMenu";
 import ContactConsole from "components/contact/ContactConsole";
 

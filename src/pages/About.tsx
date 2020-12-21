@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 
-import Layout from "components/Layout";
+import Layout from "components/layout/Layout";
 
 import { AboutData } from "data/AboutData";
 

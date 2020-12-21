@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "components/Layout";
+import Layout from "components/layout/Layout";
 import styled, { keyframes } from "styled-components";
 
 import BACKIMG from "assets/images/home/background.png";

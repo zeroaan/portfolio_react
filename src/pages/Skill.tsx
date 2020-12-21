@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import AboutLayout from "components/AboutLayout";
+import AboutLayout from "components/layout/AboutLayout";
 import SkillContent from "components/skill/SkillContent";
 
 import REACT from "assets/images/skill/react.png";
