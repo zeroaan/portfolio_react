@@ -68,6 +68,48 @@ const fadeIn = keyframes`
 - 내가 하고자 하는 일에 대한 생각과 간략한 소개를 적어 놓았다.
 
 ![profile](https://user-images.githubusercontent.com/48481448/102965824-fa4d0e00-4531-11eb-85b4-a6fa5855e829.png)
+<br />
+
+#### src/pages/Profile.tsx
+
+```tsx
+const Profile = () => {
+  return (
+    <AboutLayout title="Profile">
+      <DivStyle>
+        <H1WhoAmI>WHO AM I</H1WhoAmI>
+        <DivProfile>
+          {ProfileData.map((v) => (
+            <ProfileContent key={v.id} title={v.title} desc={v.desc} />
+          ))}
+        </DivProfile>
+      </DivStyle>
+    </AboutLayout>
+  );
+};
+```
+
+<br />
+
+#### src/components/profile/ProfileContent.tsx
+
+```tsx
+interface Props {
+  title: string;
+  desc: string;
+}
+
+const ProfileContent: React.FC<Props> = ({ title, desc }) => {
+  return (
+    <DivData>
+      <DivTitle>
+        <PTitle>{title}</PTitle>
+      </DivTitle>
+      <PDesc>{desc}</PDesc>
+    </DivData>
+  );
+};
+```
 
 <br />
 
@@ -76,6 +118,63 @@ const fadeIn = keyframes`
 - 내가 사용하는 주 언어, 기술에 대해서 나열하였으며, 그 밑으로는 기초 지식 습득 또는 현재 공부 중인 기술들을 적어놓았다.
 
 ![skill](https://user-images.githubusercontent.com/48481448/102966195-beff0f00-4532-11eb-96d8-122a52ceac45.png)
+<br />
+
+#### src/pages/Skill.tsx
+
+```tsx
+const Skill = () => {
+  return (
+    <AboutLayout title="Skill">
+      <DivStyle>
+        <DivSkills>
+          <DivBlur />
+          <ImgSkill src={REACT} alt="REACT" />
+          <PSkill>React</PSkill>
+        </DivSkills>
+        <DivSkills>
+          <DivBlur />
+          <ImgSkill src={TYPESCRIPT} alt="TYPESCRIPT" />
+          <PSkill>Typescript</PSkill>
+        </DivSkills>
+        <DivSkills>
+          <DivBlur />
+          <ImgSkill src={REDUX} alt="REDUX" />
+          <PSkill>Redux</PSkill>
+        </DivSkills>
+      </DivStyle>
+
+      <SkillContent />
+    </AboutLayout>
+  );
+};
+```
+
+<br />
+
+#### src/components/skill/SkillContent.tsx
+
+```tsx
+const SkillContent = () => {
+  return (
+    <>
+      <DivSkills>
+        {SkillData.map((v) => (
+          <PSkill key={v}>{v}</PSkill>
+        ))}
+      </DivSkills>
+      <DivEtcSkills>
+        <SkillEtc />
+        <DivSkills>
+          {EtcData.map((v) => (
+            <PSkill key={v}>{v}</PSkill>
+          ))}
+        </DivSkills>
+      </DivEtcSkills>
+    </>
+  );
+};
+```
 
 <br />
 
@@ -84,6 +183,52 @@ const fadeIn = keyframes`
 - 나의 이름, 이메일 주소, 깃허브 주소를 Console 창처럼 보이도록 만들어 보았다.
 
 ![contact](https://user-images.githubusercontent.com/48481448/102966272-ebb32680-4532-11eb-96db-c0771f8b62b4.png)
+<br />
+
+#### src/pages/Contact.tsx
+
+```tsx
+const Contact = () => {
+  return (
+    <AboutLayout title="Contact">
+      <DivStyle>
+        <ContactMenu />
+        <DivConsole>
+          <ContactConsole />
+          <DivBlinkInput>
+            {"> "} <DivBlink />
+          </DivBlinkInput>
+        </DivConsole>
+      </DivStyle>
+    </AboutLayout>
+  );
+};
+```
+
+<br />
+
+#### src/components/ContactConsole.tsx
+
+```tsx
+const ContactConsole = () => {
+  return (
+    <>
+      {contactData.map((v) => (
+        <DivBorder key={v.input}>
+          <PInput>{"> " + v.input}</PInput>
+          {v.input === `zeroaan.github` ? (
+            <a href="http://github.com/zeroaan" target="_blank" rel="noreferrer">
+              <POutput>{"< " + v.output}</POutput>
+            </a>
+          ) : (
+            <POutput>{"< " + v.output}</POutput>
+          )}
+        </DivBorder>
+      ))}
+    </>
+  );
+};
+```
 
 <br />
 
@@ -92,3 +237,109 @@ const fadeIn = keyframes`
 - 공부했던 프로젝트들을 나열했으며, 클릭 시 해당 github로 이동한다.
 
 ![project](https://user-images.githubusercontent.com/48481448/102966640-a7745600-4533-11eb-9823-ee5f9de974d1.png)
+<br />
+
+#### src/pages/Project.tsx
+
+```tsx
+const Project = () => {
+  return (
+    <Layout>
+      <PGithub>Click to go to the GitHub</PGithub>
+      <DivContainer>
+        {ProjectData.map((v) => (
+          <AProjects key={v.id} href={v.github} target="_blank">
+            <DivProImg src={v.src} alt={v.title} />
+            <DivProBack>
+              <PTitle>{v.title}</PTitle>
+              <PSubTitle>{v.subTitle}</PSubTitle>
+            </DivProBack>
+          </AProjects>
+        ))}
+      </DivContainer>
+    </Layout>
+  );
+};
+```
+
+<br />
+
+## Components
+
+- 주된 components로 Navbar와 Layout이 있다.
+
+<br />
+
+### Navbar
+
+- useLocation hook을 통해 현재 페이지일 때 border와 color를 조정해주었다.
+  <br />
+
+#### src/components/navbar/Navbar.tsx
+
+```tsx
+const LinkStyled = styled(Link)<{ $current: boolean }>`
+  padding: 12px 30px;
+  font-size: 18px;
+  text-align: center;
+  opacity: ${(props) => (props.$current ? 1 : 0.5)};
+  border-bottom: 5px solid ${(props) => (props.$current ? "rgb(60, 173, 212)" : "transparent")};
+  transition: all 0.3s linear;
+  &:hover {
+    opacity: 1;
+  }
+`;
+
+// 생략
+
+const Navbar = () => {
+  const { pathname } = useLocation();
+
+  return (
+    <>
+      <DivStyled>
+        <ImgLogo src={LOGO} alt="LOGO" />
+        <div>
+          <LinkStyled to="/" $current={pathname === "/"}>
+            Home
+          </LinkStyled>
+          <LinkStyled to="/about" $current={pathname === "/about"}>
+            About
+          </LinkStyled>
+          <LinkStyled to="/project" $current={pathname === "/project"}>
+            Project
+          </LinkStyled>
+        </div>
+        <AGithub href="https://github.com/zeroaan" target="_blank">
+          <ImgGithub src={GITHUB} alt="GITHUB" />
+        </AGithub>
+      </DivStyled>
+    </>
+  );
+};
+```
+
+<br />
+
+### Layout
+
+- 각 페이지에서 Navbar가 모두 포함되도록 Layout 컴포넌트를 만들어 주었다.
+  <br/>
+
+#### src/components/layout/Layout.tsx
+
+```tsx
+import React from "react";
+import Navbar from "components/navbar/Navbar";
+
+const Layout: React.FC = ({ children }) => {
+  return (
+    <>
+      <Navbar />
+      {children}
+    </>
+  );
+};
+
+export default Layout;
+```
