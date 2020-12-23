@@ -72,6 +72,8 @@ const fadeIn = keyframes`
 
 #### src/pages/Profile.tsx
 
+- profileData를 가져와 id, title, dese를 ProfileContent로 전달한다.
+
 ```tsx
 const Profile = () => {
   return (
@@ -122,6 +124,8 @@ const ProfileContent: React.FC<Props> = ({ title, desc }) => {
 
 #### src/pages/Skill.tsx
 
+- react, typescript, redux의 이미지를 나열하고, 다른 skills 들은 SkillContent 컴포넌트에서 관리한다.
+
 ```tsx
 const Skill = () => {
   return (
@@ -153,6 +157,8 @@ const Skill = () => {
 <br />
 
 #### src/components/skill/SkillContent.tsx
+
+- SkillData와 EtcData(기본지식 습득 & 공부중인 기술)을 가져와 나열해준다.
 
 ```tsx
 const SkillContent = () => {
@@ -209,6 +215,8 @@ const Contact = () => {
 
 #### src/components/ContactConsole.tsx
 
+- contactData를 가져와 input과 output 를 보여준다. github일 때는 링크로 설정해준다.
+
 ```tsx
 const ContactConsole = () => {
   return (
@@ -240,6 +248,8 @@ const ContactConsole = () => {
 <br />
 
 #### src/pages/Project.tsx
+
+- ProjectData에서 프로젝트 이미지, 제목, 설명을 나열한다.
 
 ```tsx
 const Project = () => {
