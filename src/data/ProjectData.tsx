@@ -17,8 +17,8 @@ export const ProjectData = [
   },
   {
     id: 7,
-    title: "Team Con Project",
-    subTitle: "Kosta 팀 프로젝트",
+    title: "Kosta Team Project",
+    subTitle: "자율주행 배달로봇 WEB",
     github: "https://github.com/zeroaan/con_web",
     src: PROJECT07,
   },
