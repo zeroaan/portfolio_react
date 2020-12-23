@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/portfolio_react/static/js/main.a0cf07f1.chunk.js",
-    "main.js.map": "/portfolio_react/static/js/main.a0cf07f1.chunk.js.map",
+    "main.js": "/portfolio_react/static/js/main.901a9660.chunk.js",
+    "main.js.map": "/portfolio_react/static/js/main.901a9660.chunk.js.map",
     "runtime-main.js": "/portfolio_react/static/js/runtime-main.272da58a.js",
     "runtime-main.js.map": "/portfolio_react/static/js/runtime-main.272da58a.js.map",
     "static/js/2.f0cfd64b.chunk.js": "/portfolio_react/static/js/2.f0cfd64b.chunk.js",
@@ -17,7 +17,7 @@
     "static/media/project02.4f5fcf6a.png": "/portfolio_react/static/media/project02.4f5fcf6a.png",
     "static/media/project03.0407f1e5.png": "/portfolio_react/static/media/project03.0407f1e5.png",
     "static/media/project07.18da557f.png": "/portfolio_react/static/media/project07.18da557f.png",
-    "static/media/project08.594dbf75.png": "/portfolio_react/static/media/project08.594dbf75.png",
+    "static/media/project08.5a6c9936.png": "/portfolio_react/static/media/project08.5a6c9936.png",
     "static/media/react.83951b11.png": "/portfolio_react/static/media/react.83951b11.png",
     "static/media/redux.a141b2b4.png": "/portfolio_react/static/media/redux.a141b2b4.png",
     "static/media/skill.23153a50.png": "/portfolio_react/static/media/skill.23153a50.png",
@@ -26,6 +26,6 @@
   "entrypoints": [
     "static/js/runtime-main.272da58a.js",
     "static/js/2.f0cfd64b.chunk.js",
-    "static/js/main.a0cf07f1.chunk.js"
+    "static/js/main.901a9660.chunk.js"
   ]
 }
