@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
-import AboutLayout from "components/layout/AboutLayout";
-import SkillContent from "components/skill/SkillContent";
+import AboutLayout from "components/layout/AboutLayout"
+import SkillContent from "components/skill/SkillContent"
 
-import REACT from "assets/images/skill/react.png";
-import TYPESCRIPT from "assets/images/skill/typescript.png";
-import REDUX from "assets/images/skill/redux.png";
+import REACT from "assets/images/skill/react.png"
+import JAVASCRIPT from "assets/images/skill/javascript.png"
+import REDUX from "assets/images/skill/redux.png"
 
 const DivStyle = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ const DivStyle = styled.div`
   height: 50%;
   margin-bottom: 15px;
   color: rgb(220, 220, 220);
-`;
+`
 const DivSkills = styled.div`
   position: relative;
   display: flex;
@@ -30,7 +30,7 @@ const DivSkills = styled.div`
   &:hover {
     transform: scale(1.05);
   }
-`;
+`
 const DivBlur = styled.div`
   position: absolute;
   top: 0;
@@ -41,16 +41,16 @@ const DivBlur = styled.div`
   filter: blur(50px);
   border-radius: 50%;
   z-index: -1;
-`;
+`
 const ImgSkill = styled.img`
   width: 150px;
   height: 150px;
-`;
+`
 const PSkill = styled.p`
   font-size: 25px;
   margin-top: 10px;
   text-transform: uppercase;
-`;
+`
 
 const Skill = () => {
   return (
@@ -63,8 +63,8 @@ const Skill = () => {
         </DivSkills>
         <DivSkills>
           <DivBlur />
-          <ImgSkill src={TYPESCRIPT} alt="TYPESCRIPT" />
-          <PSkill>Typescript</PSkill>
+          <ImgSkill src={JAVASCRIPT} alt="JAVASCRIPT" />
+          <PSkill>Javascript</PSkill>
         </DivSkills>
         <DivSkills>
           <DivBlur />
@@ -75,7 +75,7 @@ const Skill = () => {
 
       <SkillContent />
     </AboutLayout>
-  );
-};
+  )
+}
 
-export default Skill;
+export default Skill
