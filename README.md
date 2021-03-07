@@ -31,7 +31,7 @@ const typing = keyframes`
   30%, 50%, 60% {
     max-width: 100%;
   }
-`;
+`
 const blinkTyping = keyframes`
     0%, 100%{
       border-color: transparent;
@@ -39,7 +39,7 @@ const blinkTyping = keyframes`
     50% {
       border-color: white;
     }
-`;
+`
 ```
 
 <br />
@@ -58,7 +58,7 @@ const fadeIn = keyframes`
   100% {
     opacity: 1;
   }
-`;
+`
 ```
 
 <br />
@@ -67,19 +67,20 @@ const fadeIn = keyframes`
 
 - 내가 하고자 하는 일에 대한 생각과 간략한 소개를 적어 놓았다.
 
-![profile](https://user-images.githubusercontent.com/48481448/102965824-fa4d0e00-4531-11eb-85b4-a6fa5855e829.png)
+![profile](https://user-images.githubusercontent.com/48481448/110238408-cc019b00-7f84-11eb-90af-d96fa1f81b72.png)
 <br />
 
 #### src/pages/Profile.tsx
 
-- profileData를 가져와 id, title, dese를 ProfileContent로 전달한다.
+- profileData를 가져와 id, title, desc를 ProfileContent로 전달한다.
 
 ```tsx
 const Profile = () => {
   return (
     <AboutLayout title="Profile">
       <DivStyle>
-        <H1WhoAmI>WHO AM I</H1WhoAmI>
+        <ProfileMe />
+
         <DivProfile>
           {ProfileData.map((v) => (
             <ProfileContent key={v.id} title={v.title} desc={v.desc} />
@@ -87,8 +88,8 @@ const Profile = () => {
         </DivProfile>
       </DivStyle>
     </AboutLayout>
-  );
-};
+  )
+}
 ```
 
 <br />
@@ -97,8 +98,8 @@ const Profile = () => {
 
 ```tsx
 interface Props {
-  title: string;
-  desc: string;
+  title: string
+  desc: string
 }
 
 const ProfileContent: React.FC<Props> = ({ title, desc }) => {
@@ -109,8 +110,8 @@ const ProfileContent: React.FC<Props> = ({ title, desc }) => {
       </DivTitle>
       <PDesc>{desc}</PDesc>
     </DivData>
-  );
-};
+  )
+}
 ```
 
 <br />
@@ -119,7 +120,7 @@ const ProfileContent: React.FC<Props> = ({ title, desc }) => {
 
 - 내가 사용하는 주 언어, 기술에 대해서 나열하였으며, 그 밑으로는 기초 지식 습득 또는 현재 공부 중인 기술들을 적어놓았다.
 
-![skill](https://user-images.githubusercontent.com/48481448/102966195-beff0f00-4532-11eb-96d8-122a52ceac45.png)
+![skill](https://user-images.githubusercontent.com/48481448/110238418-de7bd480-7f84-11eb-96aa-bb529606a66f.png)
 <br />
 
 #### src/pages/Skill.tsx
@@ -131,55 +132,17 @@ const Skill = () => {
   return (
     <AboutLayout title="Skill">
       <DivStyle>
-        <DivSkills>
-          <DivBlur />
-          <ImgSkill src={REACT} alt="REACT" />
-          <PSkill>React</PSkill>
-        </DivSkills>
-        <DivSkills>
-          <DivBlur />
-          <ImgSkill src={TYPESCRIPT} alt="TYPESCRIPT" />
-          <PSkill>Typescript</PSkill>
-        </DivSkills>
-        <DivSkills>
-          <DivBlur />
-          <ImgSkill src={REDUX} alt="REDUX" />
-          <PSkill>Redux</PSkill>
-        </DivSkills>
-      </DivStyle>
-
-      <SkillContent />
-    </AboutLayout>
-  );
-};
-```
-
-<br />
-
-#### src/components/skill/SkillContent.tsx
-
-- SkillData와 EtcData(기본지식 습득 & 공부중인 기술)을 가져와 나열해준다.
-
-```tsx
-const SkillContent = () => {
-  return (
-    <>
-      <DivSkills>
         {SkillData.map((v) => (
-          <PSkill key={v}>{v}</PSkill>
+          <DivSkills key={v.name}>
+            <DivBlur />
+            <ImgSkill src={v.image} alt={v.name} />
+            <PSkill>{v.name}</PSkill>
+          </DivSkills>
         ))}
-      </DivSkills>
-      <DivEtcSkills>
-        <SkillEtc />
-        <DivSkills>
-          {EtcData.map((v) => (
-            <PSkill key={v}>{v}</PSkill>
-          ))}
-        </DivSkills>
-      </DivEtcSkills>
-    </>
-  );
-};
+      </DivStyle>
+    </AboutLayout>
+  )
+}
 ```
 
 <br />
@@ -207,8 +170,8 @@ const Contact = () => {
         </DivConsole>
       </DivStyle>
     </AboutLayout>
-  );
-};
+  )
+}
 ```
 
 <br />
@@ -234,8 +197,8 @@ const ContactConsole = () => {
         </DivBorder>
       ))}
     </>
-  );
-};
+  )
+}
 ```
 
 <br />
@@ -244,7 +207,7 @@ const ContactConsole = () => {
 
 - 공부했던 프로젝트들을 나열했으며, 클릭 시 해당 github로 이동한다.
 
-![project](https://user-images.githubusercontent.com/48481448/102966640-a7745600-4533-11eb-9823-ee5f9de974d1.png)
+![project](https://user-images.githubusercontent.com/48481448/110238430-f0f60e00-7f84-11eb-993a-f0761bb83461.png)
 <br />
 
 #### src/pages/Project.tsx
@@ -268,8 +231,8 @@ const Project = () => {
         ))}
       </DivContainer>
     </Layout>
-  );
-};
+  )
+}
 ```
 
 <br />
@@ -298,12 +261,12 @@ const LinkStyled = styled(Link)<{ $current: boolean }>`
   &:hover {
     opacity: 1;
   }
-`;
+`
 
 // 생략
 
 const Navbar = () => {
-  const { pathname } = useLocation();
+  const { pathname } = useLocation()
 
   return (
     <>
@@ -325,8 +288,8 @@ const Navbar = () => {
         </AGithub>
       </DivStyled>
     </>
-  );
-};
+  )
+}
 ```
 
 <br />
@@ -339,8 +302,8 @@ const Navbar = () => {
 #### src/components/layout/Layout.tsx
 
 ```tsx
-import React from "react";
-import Navbar from "components/navbar/Navbar";
+import React from "react"
+import Navbar from "components/navbar/Navbar"
 
 const Layout: React.FC = ({ children }) => {
   return (
@@ -348,8 +311,8 @@ const Layout: React.FC = ({ children }) => {
       <Navbar />
       {children}
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout
 ```
