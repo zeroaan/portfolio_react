@@ -1,13 +1,21 @@
-import PROJECT01 from "assets/images/project/project01.png";
-import PROJECT02 from "assets/images/project/project02.png";
-import PROJECT03 from "assets/images/project/project03.png";
-import PROJECT04 from "assets/images/project/project04.png";
-import PROJECT05 from "assets/images/project/project05.png";
-import PROJECT06 from "assets/images/project/project06.png";
-import PROJECT07 from "assets/images/project/project07.png";
-import PROJECT08 from "assets/images/project/project08.png";
+import PROJECT01 from "assets/images/project/project01.png"
+import PROJECT02 from "assets/images/project/project02.png"
+import PROJECT03 from "assets/images/project/project03.png"
+import PROJECT04 from "assets/images/project/project04.png"
+import PROJECT05 from "assets/images/project/project05.png"
+import PROJECT06 from "assets/images/project/project06.png"
+import PROJECT07 from "assets/images/project/project07.png"
+import PROJECT08 from "assets/images/project/project08.png"
+import PROJECT09 from "assets/images/project/project09.png"
 
 export const ProjectData = [
+  {
+    id: 9,
+    title: "편리 (편의점 리뷰)",
+    subTitle: "React-Native로 만든 앱",
+    github: "https://github.com/zeroaan/cstore_review",
+    src: PROJECT09,
+  },
   {
     id: 8,
     title: "React Portfolio",
@@ -18,7 +26,7 @@ export const ProjectData = [
   {
     id: 7,
     title: "Kosta Team Project",
-    subTitle: "자율주행 배달로봇 WEB",
+    subTitle: "자율주행 배달로봇 소개 WEB",
     github: "https://github.com/zeroaan/con_web",
     src: PROJECT07,
   },
@@ -32,7 +40,7 @@ export const ProjectData = [
   {
     id: 5,
     title: "To Do List",
-    subTitle: "Redux를 사용한 상태관리",
+    subTitle: "Redux, Styled-Components",
     github: "https://github.com/zeroaan/todolist",
     src: PROJECT05,
   },
@@ -64,4 +72,4 @@ export const ProjectData = [
     github: "https://github.com/zeroaan/portfolio",
     src: PROJECT01,
   },
-];
+]
