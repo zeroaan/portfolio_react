@@ -2,19 +2,15 @@ import React from "react"
 import styled from "styled-components"
 
 import AboutLayout from "components/layout/AboutLayout"
-import SkillContent from "components/skill/SkillContent"
 
-import REACT from "assets/images/skill/react.png"
-import JAVASCRIPT from "assets/images/skill/javascript.png"
-import REDUX from "assets/images/skill/redux.png"
+import { SkillData } from "data/SkillData"
 
 const DivStyle = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 50%;
-  margin-bottom: 15px;
   color: rgb(220, 220, 220);
 `
 const DivSkills = styled.div`
@@ -23,9 +19,9 @@ const DivSkills = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 250px;
-  margin: 0 30px;
+  width: 170px;
+  height: 170px;
+  margin: 25px 30px;
   transition: all 0.3s ease;
   &:hover {
     transform: scale(1.05);
@@ -43,37 +39,26 @@ const DivBlur = styled.div`
   z-index: -1;
 `
 const ImgSkill = styled.img`
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
 `
 const PSkill = styled.p`
-  font-size: 25px;
-  margin-top: 10px;
-  text-transform: uppercase;
+  font-size: 24px;
+  margin-top: 12px;
 `
 
 const Skill = () => {
   return (
     <AboutLayout title="Skill">
       <DivStyle>
-        <DivSkills>
-          <DivBlur />
-          <ImgSkill src={REACT} alt="REACT" />
-          <PSkill>React</PSkill>
-        </DivSkills>
-        <DivSkills>
-          <DivBlur />
-          <ImgSkill src={JAVASCRIPT} alt="JAVASCRIPT" />
-          <PSkill>Javascript</PSkill>
-        </DivSkills>
-        <DivSkills>
-          <DivBlur />
-          <ImgSkill src={REDUX} alt="REDUX" />
-          <PSkill>Redux</PSkill>
-        </DivSkills>
+        {SkillData.map((v) => (
+          <DivSkills key={v.name}>
+            <DivBlur />
+            <ImgSkill src={v.image} alt={v.name} />
+            <PSkill>{v.name}</PSkill>
+          </DivSkills>
+        ))}
       </DivStyle>
-
-      <SkillContent />
     </AboutLayout>
   )
 }
