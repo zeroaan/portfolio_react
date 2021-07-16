@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
-import AboutLayout from "components/layout/AboutLayout"
+import AboutLayout from "components/layout/AboutLayout";
 
-import { SkillData } from "data/SkillData"
+import { SkillData } from "data/SkillData";
 
 const DivStyle = styled.div`
   display: flex;
@@ -11,8 +11,9 @@ const DivStyle = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 80%;
   color: rgb(220, 220, 220);
-`
+`;
 const DivSkills = styled.div`
   position: relative;
   display: flex;
@@ -26,7 +27,7 @@ const DivSkills = styled.div`
   &:hover {
     transform: scale(1.05);
   }
-`
+`;
 const DivBlur = styled.div`
   position: absolute;
   top: 0;
@@ -37,15 +38,15 @@ const DivBlur = styled.div`
   filter: blur(50px);
   border-radius: 50%;
   z-index: -1;
-`
+`;
 const ImgSkill = styled.img`
   width: 120px;
   height: 120px;
-`
+`;
 const PSkill = styled.p`
   font-size: 24px;
   margin-top: 12px;
-`
+`;
 
 const Skill = () => {
   return (
@@ -60,7 +61,7 @@ const Skill = () => {
         ))}
       </DivStyle>
     </AboutLayout>
-  )
-}
+  );
+};
 
-export default Skill
+export default Skill;
